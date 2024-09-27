@@ -18,6 +18,31 @@
       },
       "minecraft:speed": {
         "value": 20.0
+      },
+      "minecraft:health": {
+        "value": 20
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:attack": { 
+        "value": 0  // No direct attack damage, using knockback instead
+      },
+      "minecraft:follow_range": {
+        "value": 10
+      },
+      "minecraft:knockback": { // Added knockback for the telekinetic effect
+        "on_hurt": {
+          "probability": 1.0, // Always knockback when hurt
+          "strength": 5.0     // Strong knockback force
+        },
+        "on_attack": {        // Knockback when Flash attacks 
+          "probability": 1.0, 
+          "strength": 8.0      // Even stronger knockback
+        } 
+      },
+      "minecraft:tag": { // Added tag component
+        "value": "flash" // Tag value
       }
     }
   }
