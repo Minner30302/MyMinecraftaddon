@@ -13,19 +13,11 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 2
-      },
-      "minecraft:behavior.melee_attack": { 
-        "priority": 3,
-        "attack_damage": 3, // Small melee damage if they get close
-        "track_range": 8 
-      },
-      "minecraft:behavior.fly": { // Added flying behavior
-        "priority": 4
       }
     },
     "components": {
       "minecraft:can_climb": {},
-      "minecraft:can_fly": {}, // Added can_fly component
+      "minecraft:can_fly": {},
       "minecraft:can_power_jump": {},
       "minecraft:can_swim": {},
       "minecraft:health": {
@@ -50,8 +42,8 @@
           "strength": 8.0      // Even stronger knockback
         } 
       },
-      "minecraft:fly": { // Added fly component
-        "speed": 10.0 // Flying speed
+      "minecraft:tag": { // Added tag component
+        "value": "wanda" // Tag value
       }
     }
   }
