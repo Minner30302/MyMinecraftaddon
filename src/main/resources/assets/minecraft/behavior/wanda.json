@@ -1,0 +1,58 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "wanda",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "minecraft:behavior.random_stroll": {
+        "priority": 1
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 2
+      },
+      "minecraft:behavior.melee_attack": { 
+        "priority": 3,
+        "attack_damage": 3, // Small melee damage if they get close
+        "track_range": 8 
+      },
+      "minecraft:behavior.fly": { // Added flying behavior
+        "priority": 4
+      }
+    },
+    "components": {
+      "minecraft:can_climb": {},
+      "minecraft:can_fly": {}, // Added can_fly component
+      "minecraft:can_power_jump": {},
+      "minecraft:can_swim": {},
+      "minecraft:health": {
+        "value": 20
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:attack": { 
+        "value": 0  // No direct attack damage, using knockback instead
+      },
+      "minecraft:follow_range": {
+        "value": 10
+      },
+      "minecraft:knockback": { // Added knockback for the telekinetic effect
+        "on_hurt": {
+          "probability": 1.0, // Always knockback when hurt
+          "strength": 5.0     // Strong knockback force
+        },
+        "on_attack": {        // Knockback when Wanda attacks 
+          "probability": 1.0, 
+          "strength": 8.0      // Even stronger knockback
+        } 
+      },
+      "minecraft:fly": { // Added fly component
+        "speed": 10.0 // Flying speed
+      }
+    }
+  }
+}
