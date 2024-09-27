@@ -1,0 +1,17 @@
+{
+  "format_version": "1.20.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "captainmarvel_wings",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:use_duration": {
+        "value": 1
+      },
+      "minecraft:on_use": {
+        "event": "captainmarvel_fly" // Trigger the flying event
+      }
+    }
+  }
+}
