@@ -1,0 +1,17 @@
+src/main/java/com/example/myaddon/abilities/WandaMaximoffAbility.java
+package com.example.myaddon.abilities;
+
+import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+public class WandaMaximoffAbility {
+
+    public static void manipulateBlock(EntityPlayer player, World world, BlockPos pos) {
+        if (player.isSneaking()) { // Example condition: Sneak to change block
+            Block newBlock = Block.REGISTRY.getRandom(world.getRandom()).get();// Example: Random block replacement
+            world.setBlockState(pos, newBlock.getDefaultState());
+        }
+    }
+}
