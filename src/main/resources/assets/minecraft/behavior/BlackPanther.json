@@ -1,0 +1,39 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "blackpanther",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "minecraft:behavior.move_fast": {
+        "priority": 1
+      }
+    },
+    "components": {
+      "minecraft:movement": {
+        "value": 15.0
+      },
+      "minecraft:speed": {
+        "value": 25.0
+      },
+      "minecraft:health": {
+        "value": 25
+      },
+      "minecraft:knockback_resistance": {
+        "value": 2.0
+      },
+      "minecraft:attack": {
+        "value": 12
+      },
+      "minecraft:follow_range": {
+        "value": 12
+      },
+      "minecraft:tag": {      
+        "value": "blackpanther" 
+      }
+    }
+  }
+}
