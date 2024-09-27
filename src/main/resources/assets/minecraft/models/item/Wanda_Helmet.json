@@ -1,0 +1,17 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "wanda_helmet", // Unique ID for the item
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:wearable": {
+        "slot": "slot.armor.head" // Makes it a helmet
+      },
+      "minecraft:icon": { // Optional: If you have a custom texture
+        "texture": "wanda_helmet_icon" 
+      }
+    }
+  }
+}
